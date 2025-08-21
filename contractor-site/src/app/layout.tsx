@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     template: "%s | Contractor Portfolio",
   },
   description: "Professional contractor specializing in residential and commercial construction. View CV, services, and get in touch.",
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://ironcrewai.co.uk"),
   openGraph: {
     title: "Contractor Portfolio",
     description:
       "Professional contractor specializing in residential and commercial construction.",
-    url: "https://example.com",
+    url: "https://ironcrewai.co.uk",
     siteName: "Contractor Portfolio",
     type: "website",
   },
