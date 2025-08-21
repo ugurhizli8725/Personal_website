@@ -6,7 +6,7 @@ export default function Home() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div>
           <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-            Quality Construction. Reliable Service.
+            We’re building AI engine to empower the construction workers in the UK.
           </h1>
           <p className="mt-4 text-black/70 dark:text-white/70 text-lg">
             Residential and commercial builds, renovations, and repairs. 10+ years of hands-on experience delivering safe, on-time results.
