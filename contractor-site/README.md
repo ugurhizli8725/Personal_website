@@ -20,6 +20,19 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Data layer (Prisma + SQLite)
+
+```bash
+cp .env.example .env
+npm install
+npm run prisma:generate
+npm run prisma:migrate
+npm run prisma:seed
+```
+
+- The SQLite database lives at `./dev.db` (relative to project root).
+- API routes under `src/app/api/*` expose Services, Availability, References, Certifications, Communications, and Pricing.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
