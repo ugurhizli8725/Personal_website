@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
+import prisma from "@/lib/prisma";
 
-// Example: send to email or webhook. Here we log and pretend to send.
+// Example: send to email or webhook. Here we log and persist.
 export async function POST(request: NextRequest) {
   const formData = await request.formData();
 
@@ -10,6 +11,13 @@ export async function POST(request: NextRequest) {
 
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Missing fields" }, { status: 400 });
+  }
+
+  // Persist communication
+  try {
+    await prisma.communication.create({ data: { name, email, message, source: "website" } });
+  } catch (error) {
+    console.error("Failed to persist contact message:", error);
   }
 
   // Replace with real email or webhook integration
